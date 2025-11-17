@@ -1,1 +1,35 @@
-bv
+Instagram Reels Engagement Analysis
+
+This project is all about understanding what actually drives engagement on Instagram Reels. I scraped data using Instaloader, cleaned it and then analysed everything from genres and creator types to hashtags, captions, timing and even checked with a regression model to see what matters and what doesn’t.
+
+Data Collection
+
+I used Instaloader with browser cookies to scrape reels from multiple creators. For each reel, I collected username, genre, followers, likes, comments, plays, caption, hashtags, posting hour, posting date and video duration. All data was saved into a CSV and used for the full analysis.
+
+Data Preparation and Feature Creation
+
+I loaded the dataset, converted dates, handled missing text fields, checked duplicates and created new columns like engagement rate, caption length, hashtag count, day of week, month and posting hour. This helped me understand patterns clearly.
+
+Genre and Creator Insights
+
+I analysed which genres perform best in terms of views, likes and engagement. I also grouped creators by follower count (micro, mid, macro and mega) to see which category gets the highest engagement. I checked viral reels by marking the top 5 percent of plays and identified which creators produced more viral reels.
+
+Posting Behaviour and Timing Insights
+
+I studied the best days and hours to post by comparing engagement across weekdays and posting hours. I also analysed posting frequency to see whether creators who post more often get better engagement. These plots helped understand when audiences interact the most.
+
+Caption, Hashtag and Content Style Insights
+
+I checked how caption length affects likes, comments and engagement. I generated wordclouds to see which hashtags are used the most and which ones appear in high-engagement reels. I also plotted video duration against engagement to see if longer or shorter reels perform differently.
+
+Time-Based Trends
+
+I analysed how engagement changes daily and monthly. I highlighted spikes that fall in the top 5 percent engagement. I also checked how engagement moves month by month for the top creators to understand their consistency.
+
+Regression Check
+
+I built a simple OLS regression model using hashtag count, caption length, video duration, posting hour and followers to see if any of these actually predict engagement. The model showed almost no predictive power, which confirms engagement is not controlled by simple numeric features.
+
+Conclusion
+
+Overall, the analysis shows that engagement on Instagram Reels doesn’t depend on caption length, hashtag count, posting hour or video duration in any strong way. Genres like memes, fashion and travel consistently do well and mid-size creators get the highest engagement. Viral spikes are unpredictable and happen rarely. Content quality, creativity and niche matter far more than these individual metrics, and timing mainly helps but doesn’t guarantee results.
